@@ -1,0 +1,65 @@
+.textebienvenue {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;    /* corrigé : c'était "font.b-weight" */
+  font-style: normal;
+  text-align: center;
+  color: #05fce0;
+  font-size: 85px;
+}
+
+
+body {
+    background-color: #1da857;
+}
+
+.question {
+    font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style:normal;
+    text-align: left;
+   font-size: 40px;
+   color: #e6ed0c;
+}
+
+.paraq {
+    font-family: Arial, Helvetica, sans-serif;
+     font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: oblique;
+    
+}
+
+.ouiq1 {
+  display: flex;
+  align-items: center;
+  gap: 1px; 
+   font-family: Arial, Helvetica, sans-serif;
+     font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: oblique;
+}
+
+.buttondiscord button {
+  background-color: #5865F2;   /* Couleur Discord */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttondiscord button:hover {
+  background-color: #4752c4;
+}
+
+.haut-de-page {
+  display: flex;
+  flex-direction: row;
+  justify-content:start;
+  flex-wrap: wrap;
+  gap: 560px;
+}
