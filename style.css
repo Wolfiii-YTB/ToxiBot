@@ -4,7 +4,7 @@
   font-style: normal;
   text-align: center;
   color: #05fce0;
-  font-size: 85px;
+  font-size: 115px;
 }
 
 
@@ -58,11 +58,76 @@ body {
 
 .haut-de-page {
   display: flex;
-  flex-direction: row;
-  justify-content:start;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 80px;          /* Plus de marge */
   flex-wrap: wrap;
-  gap: 560px;
+  gap: 30px;
 }
+
+.haut-de-page img {
+  max-height: 120px;           /* Image plus grande */
+  height: auto;
+  width: auto;
+}
+
+.haut-de-page h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 4rem;             /* Titre très grand */
+  margin: 0;
+}
+
+.haut-de-page .btn-container {
+  display: flex;
+  gap: 20px;
+}
+
+.haut-de-page button {
+  padding: 16px 32px;          /* Gros boutons */
+  font-size: 1.5rem;           /* Texte de bouton agrandi */
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.haut-de-page button:hover {
+  background-color: #0056b3;
+}
+
+/* 📱 Responsive pour écrans < 768px */
+@media (max-width: 768px) {
+  .haut-de-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .haut-de-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .haut-de-page img {
+    max-height: 80px;
+  }
+
+  .haut-de-page .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .haut-de-page button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.2rem;
+  }
+}
+
+
+
 
 .card {
   background: #1e1e2f;
@@ -98,8 +163,8 @@ body {
 }
 
 .bouttoncommande {
-  width: 220px;              /* Largeur fixe */
-  height: 60px;              /* Hauteur fixe */
+  width: 170px;              /* Largeur fixe */
+  height: 55px;              /* Hauteur fixe */
   background-color: #5865F2; /* Couleur Discord */
   color: white;
   border: none;
@@ -144,3 +209,77 @@ body {
   height: 50px;
 }
 
+.texteinvit {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;    /* corrigé : c'était "font.b-weight" */
+  font-style: normal;
+  text-align: center;
+  color: #df05fc;
+  font-size: 70px;
+}
+
+
+.invitbot {
+  background: #1e1e2f;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  max-width: 450px;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.invitbot:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.invitbot a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #5c6bc0;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.invitbot a:hover {
+  background: #3f51b5;
+}
+
+.texteinfo {
+  font-size: 20px;
+}
+
+.bouttoninvit {
+  width: 170px;              /* Largeur fixe */
+  height: 55px;              /* Hauteur fixe */
+  background-color: #5865F2; /* Couleur Discord */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;         /* Centre verticalement le texte */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;       /* Empêche le retour à la ligne */
+}
+
+.bouttoninvit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.bouttoninvit:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
