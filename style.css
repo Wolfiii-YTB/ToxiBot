@@ -64,22 +64,6 @@ body {
   gap: 560px;
 }
 
-.bouttoncommande button {
-  background-color: #5865F2;   /* Couleur Discord */
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.bouttoncommande button:hover {
-  background-color: #4752c4;
-}
-
 .card {
   background: #1e1e2f;
   color: #ffffff;
@@ -108,3 +92,55 @@ body {
   text-decoration: none;
   transition: background 0.3s ease;
 }
+
+.card a:hover {
+  background: #3f51b5;
+}
+
+.bouttoncommande {
+  width: 220px;              /* Largeur fixe */
+  height: 60px;              /* Hauteur fixe */
+  background-color: #5865F2; /* Couleur Discord */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 60px;         /* Centre verticalement le texte */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;       /* Empêche le retour à la ligne */
+}
+
+.bouttoncommande:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.bouttoncommande:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.bouttonhome a {
+  display: inline-flex;
+  flex-direction: column;     /* ⬅️ Place le texte sous l'icône */
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;   
+  font-weight: bold;        /* 🔧 Taille du texte */
+  color: inherit;             /* Garde la couleur naturelle */
+  text-decoration: none;
+  gap: 4px;                   /* Espace entre icône et texte */
+}
+
+.bouttonhome a img {
+  width: 50px;                /* 🔧 Taille de l’icône */
+  height: 50px;
+}
+
