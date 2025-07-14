@@ -28,8 +28,8 @@
   <main>
     <section class="invitbot">
       <h1>🚧 Cette fonctionnalité sera disponible prochainement. 🚧</h1>
-      <h2 id="now">Heure actuelle : </h2>
-      <h2 id="countdown">Décompte : </h2>
+
+      <link rel="stylesheet" href="https://discord.com/oauth2/authorize?client_id=1393562071228088421">
 
       <p class="texteinfo">
         Nous terminons actuellement le développement du bot ! Une première version avec les fonctionnalités de base est prévue pour le
@@ -42,53 +42,6 @@
   </main>
 
   <footer></footer>
-
-  <!-- Script -->
-  <script>
-    function updateCountdown() {
-      const now = new Date();
-      document.getElementById("now").textContent =
-        "Heure actuelle : " + now.toLocaleTimeString();
-
-      const target = new Date();
-      target.setHours(20, 0, 0, 0); // Aujourd'hui à 20h00
-
-      if (now > target) {
-        target.setDate(target.getDate() + 1);
-      }
-
-      const diffMs = target - now;
-
-      const hours = Math.floor(diffMs / (1000 * 60 * 60));
-      const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").textContent =
-        `Décompte : ${hours}h ${minutes}m ${seconds}s`;
-
-      // Quand le décompte est terminé
-      if (diffMs <= 0) {
-        showInviteButton();
-        clearInterval(intervalID); // Arrêter la boucle
-      }
-    }
-
-    function showInviteButton() {
-      const container = document.getElementById("invite-button-container");
-
-      const button = document.createElement("a");
-      button.href = "https://discord.com/oauth2/authorize?client_id=1393562071228088421&permissions=8&integration_type=0&scope=bot";
-      button.textContent = "🎉 Inviter ToxiBot maintenant !";
-      button.className = "invite-button"; // Utilise une classe CSS pour le style
-      button.target = "_blank"; // Ouvre dans un nouvel onglet
-
-      container.appendChild(button);
-    }
-
-    // Démarre la mise à jour toutes les secondes
-    const intervalID = setInterval(updateCountdown, 1000);
-    updateCountdown(); // Appel initial
-  </script>
 
   <!-- Style minimal pour le bouton (tu peux l'améliorer dans style.css) -->
   <style>
