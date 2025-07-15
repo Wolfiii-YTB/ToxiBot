@@ -139,7 +139,9 @@ body {
   margin: 20px auto;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
 }
 
 .card:hover {
@@ -151,7 +153,7 @@ body {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 15px;
-  background: #5c6bc0;
+  background: #5564b8;
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -159,13 +161,13 @@ body {
 }
 
 .card a:hover {
-  background: #3f51b5;
+  background: #1715bb;
 }
 
 .bouttoncommande {
   width: 170px;              /* Largeur fixe */
   height: 55px;              /* Hauteur fixe */
-  background-color: #5865F2; /* Couleur Discord */
+  background-color: #06feea; /* Couleur Discord */
   color: white;
   border: none;
   border-radius: 8px;
@@ -241,7 +243,7 @@ body {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 15px;
-  background: #5c6bc0;
+  background: #06feea;
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -257,32 +259,52 @@ body {
 }
 
 .bouttoninvit {
-  width: 170px;              /* Largeur fixe */
-  height: 55px;              /* Hauteur fixe */
-  background-color: #5865F2; /* Couleur Discord */
+  display: inline-block;             /* Pour que <a> se comporte comme un bouton */
+  width: auto;
+  height: auto;
+  background-color: #06feea;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 900px;                  /* Optionnel : texte plus lisible */
   text-align: center;
-  line-height: 60px;         /* Centre verticalement le texte */
+  line-height: 55px;                 /* Centre verticalement */
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;            /* Supprime le soulignement */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   user-select: none;
-  overflow: hidden;
-  white-space: nowrap;       /* Empêche le retour à la ligne */
+  white-space: nowrap;
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
+/* Survol */
 .bouttoninvit:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  text-decoration: none; /* Au cas où le navigateur tente de le remettre */
 }
 
+/* Clic */
 .bouttoninvit:active {
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.bouttoninvit, .bouttoninvit * {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+a {
+  text-decoration: none !important;
+}
+
+
 
 .texteapropos {
   font-family: "Cherry Bomb One", system-ui;
@@ -361,3 +383,43 @@ body {
 }
 
 
+.textcmd {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 800;
+  color: #e6ff01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100;
+}
+
+.tarif {
+  
+  font-family: "Michroma", sans-serif;
+  font-weight: 350;
+  font-size: 35px;
+  font-style: normal;
+  text-align: center;
+  color: #a200ff;
+
+}
+
+.tarifp {
+  font-weight: 850;
+  color: #e1ff00;
+}
+
+.paiementtxt {
+    font-family: "Basic", sans-serif;
+    font-weight: 650;
+    font-size: 25px;
+    font-style: normal;
+    text-align: center;
+    color:#03fb3d;
+}
+
+.bouttonaccueil {
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+}
