@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ToxiBot - Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1da857;
+      --green-dark: #15793f;
+      --green-darker: #0f5f30;
+      --text-light: #e0ffe9;
+    }
+
+    body {
+      font-family: 'Cherry Bomb One', cursive;
+      margin: 0;
+      background-color: var(--green);
+      color: var(--text-light);
+    }
+
+    header {
+      background-color: var(--green-dark);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .bouttonhome a {
+      color: var(--text-light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .bouttonhome img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .txtcontact {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: var(--green-darker);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: var(--text-light);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: var(--green-dark);
+      color: var(--text-light);
+      font-family: Arial, sans-serif;
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+      color: #b2e0c4;
+    }
+
+    form button {
+      background-color: var(--green);
+      color: var(--text-light);
+      border: 2px solid var(--text-light);
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: var(--green-dark);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="bouttonhome">
+      <a href="index.html">
+        <img src="image/home.svg" alt="icone menu">
+        Accueil
+      </a>
+    </div>
+    <h2 class="txtcontact">Contactez-nous !</h2>
+  </header>
+
+  <main>
+    <form action="https://formsubmit.co/toxibot.discord@gmail.com" method="POST">
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="Prénom" required placeholder="Entrez votre prénom">
+
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="Nom" required placeholder="Entrez votre nom">
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="Email" required placeholder="exemple@email.com">
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="Message" rows="5" required placeholder="Votre message ici..."></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+</body>
+</html>
