@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Contacts - ToxiBot</title>
+</head>
+<body>
+    <header>
+        <div class="btn-container">
+            <a class="btnhead" href="commandes.html">Voir les commandes</a>
+            <a class="btnhead" href="contact.html">Contact</a>
+        </div>
+        <h1 class="titre">Contactez nous</h1>
+        <h3 class="descriptionpage">Avec le formulaire ci dessous, vous pouvez nous directement contacter.</h3>
+    </header>
+        <form action="https://formsubmit.co/toxibot.discord@gmail.com" method="POST">
+            <input type="text" name="nom" placeholder="Votre nom" required>
+            <input type="text" name="prénom" placeholder="Votre prénom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="confirmationcontact.html">
+            <button type="submit">Envoyer</button>
+        </form>
+
+
+
+    <footer>
+        <p class="copyright">Copyright © 2026 ToxiBot. Tous droits réservés.</p>
+</body>
+</html>
