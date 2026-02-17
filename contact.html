@@ -19,19 +19,26 @@
         <h3 class="descriptionpage">Avec le formulaire ci dessous, vous pouvez nous directement contacter.</h3>
     </header>
 
-    <form action="https://formsubmit.co/toxibot.discord@gmail.com" method="POST">
-        <input type="text" name="nom" placeholder="Votre nom" required>
-        <input type="text" name="prenom" placeholder="Votre prenom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://wolfiii-ytb.github.io/ToxiBot/confirmationcontact.html">
-        <button type="submit">Envoyer</button>
-    </form>
+   <form action="https://formsubmit.co/toxibot.discord@gmail.com" method="POST">
+
+  <!-- FormSubmit config -->
+  <input type="hidden" name="_next" value="https://wolfiii-ytb.github.io/ToxiBot/confirmationcontact.html"/>
+  <input type="hidden" name="_subject" value="Nouveau message depuis le formulaire ToxiBot"/>
+  <input type="hidden" name="_captcha" value="false"/>
+  <input type="text" name="_honey" style="display:none"/>
+
+  <input type="text" name="nom" placeholder="Nom" required/>
+  <input type="text" name="prenom" placeholder="Prénom" required/>
+  <input type="email" name="email" placeholder="Adresse mail" required/>
+  <textarea name="message" placeholder="Votre message…" required></textarea>
+
+  <button type="submit">Envoyer</button>
+
+</form>
 
     <footer>
         <p class="copyright">Copyright © 2026 ToxiBot. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
+
