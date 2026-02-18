@@ -8,6 +8,57 @@ body {
     animation: bgAnime 12s ease infinite;
 }
 
+/*Header*/
+
+.titrsite {
+  font-family: "SN Pro", sans-serif;
+  color: white;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 1px;
+}
+
+.descrisite {
+  font-family: "SN Pro", sans-serif;
+  color: white;
+  font-optical-sizing: auto;
+  font-weight: 50;
+  font-style: italic;
+  font-size: 30px;
+  margin-top: 1px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;  
+    background: linear-gradient(270deg, #0015f9, #1eb404);
+}
+
+.eyesheader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-toxi {
+    display: flex;
+    justify-content: flex-start;
+}
+.logo-didi {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
 @keyframes bgAnime {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -56,6 +107,24 @@ body {
 }
 
 .explications:hover { 
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.explicationscmd {
+    background-color: rgb(19, 77, 223);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 400px;  
+    width: 100%;        
+    box-sizing: border-box; 
+    margin-bottom: 50px;
+    transition: transform 0.5s, box-shadow 1s;
+}
+
+.explicationscmd:hover { 
     transform: scale(1.15);
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
@@ -168,3 +237,42 @@ form button:hover {
 }
 
 /* Formulaire end*/
+
+.explications2 {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 700px;  
+    width: 100%;        
+    box-sizing: border-box; 
+    margin-bottom: 50px;
+    transition: transform 1s, box-shadow 1s;
+}
+
+.explications2:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.SocialButton {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 15px;
+}
