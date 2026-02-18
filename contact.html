@@ -10,35 +10,67 @@
     <title>Contacts - ToxiBot</title>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <a href="index.html" class="logo-toxi">
+            <img src="images/logo.png" width="135" alt="Logo de ToxiBot">
+        </a>
+
+        <div class="eyesheader">
+            <h1 class="titrsite">ToxiBot</h1>
+            <h2 class="descrisite">Maîtrisez votre serveur</h2>
+        </div>
+
+        <a href="https://discord.gg/CfdfaWH6RT" target="_blank" rel="noopener noreferrer" class="logo-didi">
+            <img src="images/plateformes/logodiscord.png" width="50" alt="Logo Discord">
+        </a>
+    </header>
+
+    <nav>
         <div class="btn-container">
             <a class="btnhead" href="commandes.html">Voir les commandes</a>
             <a class="btnhead" href="contact.html">Contact</a>
+            <a class="btnhead" href="https://discord.com/oauth2/authorize?client_id=1393562071228088421&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer">Inviter le bot</a>
         </div>
-        <h1 class="titre">Contactez nous</h1>
-        <h3 class="descriptionpage">Avec le formulaire ci dessous, vous pouvez nous directement contacter.</h3>
-    </header>
+    </nav>
 
-   <form action="https://formsubmit.co/toxibot.discord@gmail.com" method="POST">
+    <main>
+            <form action="https://formsubmit.co/toxibot.discord@gmail.com" method="POST">
 
-  <!-- FormSubmit config -->
-  <input type="hidden" name="_next" value="https://wolfiii-ytb.github.io/ToxiBot/confirmationcontact.html"/>
-  <input type="hidden" name="_subject" value="Nouveau message depuis le formulaire ToxiBot"/>
-  <input type="hidden" name="_captcha" value="false"/>
-  <input type="text" name="_honey" style="display:none"/>
+            <!-- FormSubmit config -->
+                <input type="hidden" name="_next" value="https://wolfiii-ytb.github.io/ToxiBot/confirmationcontact.html"/>
+                <input type="hidden" name="_subject" value="Nouveau message depuis le formulaire ToxiBot"/>
+                <input type="hidden" name="_captcha" value="false"/>
+                <input type="text" name="_honey" style="display:none"/>
 
-  <input type="text" name="nom" placeholder="Nom" required/>
-  <input type="text" name="prenom" placeholder="Prénom" required/>
-  <input type="email" name="email" placeholder="Adresse mail" required/>
-  <textarea name="message" placeholder="Votre message…" required></textarea>
+                 <input type="text" name="nom" placeholder="Nom" required/>
+                <input type="text" name="prenom" placeholder="Prénom" required/>
+                <input type="email" name="email" placeholder="Adresse mail" required/>
+                 <textarea name="message" placeholder="Votre message…" required></textarea>
 
-  <button type="submit">Envoyer</button>
+                 <button type="submit">Envoyer</button>
 
-</form>
+            </form>
+    </main>
 
     <footer>
         <p class="copyright">Copyright © 2026 ToxiBot. Tous droits réservés.</p>
+        <div class="SocialButton">
+            <a href="https://www.youtube.com/@ToxiBot.Discord" target="_blank" rel="noopener noreferrer">
+                <img src="images/plateformes/youtube.png" width="35" alt="Logo YouTube">
+            </a>
+            <a href="https://www.instagram.com/toxibot_discord/" target="_blank" rel="noopener noreferrer">
+                <img src="images/plateformes/instagram.png" width="50" alt="Logo Instagram">
+            </a>
+            <a href="https://discord.gg/CfdfaWH6RT" target="_blank" rel="noopener noreferrer" class="logo-didi">
+                <img src="images/plateformes/logodiscord.png" width="35" alt="Logo Discord">
+            </a>
+            <a href="https://www.tiktok.com/@toxibot_discord" target="_blank" rel="noopener noreferrer">
+                <img src="images/plateformes/tiktok.png" width="50" alt="Logo TikTok">  
+            </a>
+            <a href="mailto:toxibot.discord@gmail.com?subject=Contact&body=Support-Contact," class="btn-mail">
+                <img src="images/plateformes/gmail.png" width="35" alt="Envoyer un email">
+            </a>
+        </div>
     </footer>
 </body>
 </html>
-
