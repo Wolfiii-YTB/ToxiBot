@@ -1,63 +1,22 @@
-body {
+/* ===== RESET MARGES NAVIGATEUR ===== */
+* {
+    box-sizing: border-box;
     margin: 0;
-    height: 100vh;
+    padding: 0;
+}
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background: linear-gradient(270deg, #2096f7, #00ff91, #a269f1);
     background-size: 600% 600%;
-
     animation: bgAnime 12s ease infinite;
 }
-
-/*Header*/
-
-.titrsite {
-  font-family: "SN Pro", sans-serif;
-  color: white;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 100px;
-  line-height: 1px;
-}
-
-.descrisite {
-  font-family: "SN Pro", sans-serif;
-  color: white;
-  font-optical-sizing: auto;
-  font-weight: 50;
-  font-style: italic;
-  font-size: 30px;
-  margin-top: 1px;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    gap: 20px;  
-    background: linear-gradient(270deg, #0015f9, #1eb404);
-}
-
-.eyesheader {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    align-items: center;
-    gap: 5px;
-}
-
-.logo-toxi {
-    display: flex;
-    justify-content: flex-start;
-}
-.logo-didi {
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-
 
 @keyframes bgAnime {
     0% { background-position: 0% 50%; }
@@ -65,117 +24,92 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-
-.titre {
-      font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
-
-.descriptionpage {
-      font-family: "Tektur", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 600;
-      font-style: normal;
-      font-variation-settings:
-      "wdth" 100;
-      text-align: center;
-}
-.copyright {
-      font-family: "Tektur", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 50;
-      font-style: italic;
-      font-variation-settings:
-      "wdth" 100;
-      text-align: center;
-}
-
-.explications {
-    background-color: rgb(37, 37, 37);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 500px;  
-    width: 100%;        
-    box-sizing: border-box; 
-    margin-bottom: 50px;
-    transition: transform 1s, box-shadow 1s;
-}
-
-.explications:hover { 
-    transform: scale(1.15);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.explicationscmd {
-    background-color: rgb(19, 77, 223);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 400px;  
-    width: 100%;        
-    box-sizing: border-box; 
-    margin-bottom: 50px;
-    transition: transform 0.5s, box-shadow 1s;
-}
-
-.explicationscmd:hover { 
-    transform: scale(1.15);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-
-
-.titreEXPLI {
-    font-family: "Tektur", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-    text-align: center;
-}
-
-.descriptionEXPLI {
-    font-family: "Tektur", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 50;
-    font-style: italic;
-    font-variation-settings:
-    "wdth" 100;
-    text-align: center;
-}
-
-
-.btn-container {
-    width: 100%;               
+/* ===== HEADER ===== */
+.header {
     display: flex;
-    justify-content: center;   
-    align-items: center;       
-    height: 10vh;           
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
     gap: 20px;
+    background: linear-gradient(270deg, #0015f9, #1eb404);
+    width: 100%;
+    min-height: 80px;
 }
 
+.logo-toxi img {
+    width: clamp(40px, 9vw, 135px);
+    height: auto;
+    display: block;
+}
+
+.logo-didi img {
+    width: clamp(20px, 4vw, 50px);
+    height: auto;
+    display: block;
+}
+
+.eyesheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.titrsite {
+    font-family: "SN Pro", sans-serif;
+    color: white;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(20px, 8vw, 100px);
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.descrisite {
+    font-family: "SN Pro", sans-serif;
+    color: white;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(8px, 2.5vw, 30px);
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* ===== NAVIGATION ===== */
+.btn-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    min-height: 10vh;
+}
 
 .btnhead {
     background-color: #02fcad;
     color: rgb(0, 0, 0);
-
-    display: inline-block; 
+    display: inline-block;
     padding: 8px 15px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
-
     font-family: "Bruno Ace", sans-serif;
     font-weight: 400;
     font-style: normal;
+    white-space: nowrap;
 }
 
 .btnhead:hover {
@@ -183,12 +117,10 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-
-
 .btnnrml {
     background-color: #02fcad;
     color: rgb(0, 0, 0);
-    display: block; 
+    display: block;
     margin: 0 auto;
     width: fit-content;
     padding: 8px 15px;
@@ -206,13 +138,121 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Formulaire*/
+/* ===== TITRES ===== */
+.titre {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: clamp(18px, 4vw, 36px);
+    padding: 10px;
+    margin: 0;
+}
+
+.descriptionpage {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    font-size: clamp(13px, 2vw, 18px);
+    padding: 0 10px 10px 10px;
+    margin: 0;
+}
+
+.copyright {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    font-size: clamp(10px, 1.5vw, 14px);
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* ===== CARTES / BLOCS ===== */
+.explications {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 90%;
+    transition: transform 1s, box-shadow 1s;
+}
+
+.explications:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.explicationscmd {
+    background-color: rgb(19, 77, 223);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    width: 90%;
+    transition: transform 0.5s, box-shadow 1s;
+}
+
+.explicationscmd:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.explications2 {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 700px;
+    width: 90%;
+    transition: transform 1s, box-shadow 1s;
+}
+
+.explications2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.titreEXPLI {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    font-size: clamp(14px, 2.5vw, 20px);
+    margin: 0 0 8px 0;
+}
+
+.descriptionEXPLI {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    font-size: clamp(12px, 1.8vw, 16px);
+    margin: 0;
+}
+
+/* ===== FORMULAIRE ===== */
 form {
     max-width: 350px;
-    margin: 20px auto; /* centre le formulaire */
+    width: 90%;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* espace entre les champs */
+    gap: 10px;
 }
 
 form input,
@@ -221,6 +261,7 @@ form textarea {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+    width: 100%;
 }
 
 form button {
@@ -230,49 +271,49 @@ form button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 form button:hover {
     background: #6a33ff;
 }
 
-/* Formulaire end*/
-
-.explications2 {
-    background-color: rgb(37, 37, 37);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 700px;  
-    width: 100%;        
-    box-sizing: border-box; 
-    margin-bottom: 50px;
-    transition: transform 1s, box-shadow 1s;
-}
-
-.explications2:hover { 
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
+/* ===== FOOTER ===== */
 footer {
     margin-top: auto;
+    padding: 10px 0;
 }
 
 .SocialButton {
     display: flex;
-    justify-content: center; 
-    align-items: center;     
+    justify-content: center;
+    align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 768px) {
+    .explications:hover,
+    .explications2:hover,
+    .explicationscmd:hover {
+        transform: none;
+    }
+}
+
+/* Mobile : boutons en 2 colonnes */
+@media (max-width: 500px) {
+    .btnhead {
+        width: 45%;
+        text-align: center;
+    }
+}
+
+/* Grand écran */
+@media (min-width: 1400px) {
+    .explications  { max-width: 600px; }
+    .explications2 { max-width: 900px; }
+    .explicationscmd { max-width: 500px; }
 }
