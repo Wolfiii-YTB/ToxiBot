@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-html, body {
+html {
     height: 100%;
 }
 
@@ -16,6 +16,7 @@ body {
     background: linear-gradient(270deg, #2096f7, #00ff91, #a269f1);
     background-size: 600% 600%;
     animation: bgAnime 12s ease infinite;
+    overflow-x: hidden;
 }
 
 @keyframes bgAnime {
@@ -34,7 +35,7 @@ body {
     gap: 20px;
     background: linear-gradient(270deg, #0015f9, #1eb404);
     width: 100%;
-    min-height: 80px;
+    flex-shrink: 0;
 }
 
 .logo-toxi img {
@@ -136,6 +137,11 @@ body {
 .btnnrml:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ===== MAIN ===== */
+main {
+    overflow: hidden;
 }
 
 /* ===== TITRES ===== */
